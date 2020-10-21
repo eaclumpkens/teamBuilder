@@ -5,6 +5,7 @@ const Engineer = require("./lib/Engineer");
 
 // NODE DEPENDENCIES
 const inquirer = require("inquirer");
+const path = require("path");
 const fs = require("fs");
 
 // TEAM BUILDING
@@ -14,6 +15,7 @@ const idArray = [];
 // FUNCTIONS
 
 function startApp() {
+    let teamName;
 
     // MANAGER CREATION
     function createManager(){
@@ -43,12 +45,13 @@ function startApp() {
             const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOffice);
             teamMembers.push(manager);
             idArray.push(answers.managerID);
-            createTeam();
+            teamName = answers.managerName.trim().toLowerCase();
+            createTeam(teamName);
         });
     };
 
     // TEAM CREATION 
-    function createTeam() {
+    function createTeam(teamName) {
         // TEAM MEMBER TYPE
         inquirer.prompt([
             {
@@ -70,7 +73,7 @@ function startApp() {
                     addEngineer();
                     break;
                 default:
-                    buildTeam();        
+                    buildTeam(teamName);        
             }
         });
     }
@@ -104,7 +107,7 @@ function startApp() {
             idArray.push(answers.internID);
             
             // CREATE ADDITIONAL TEAM MEMBER
-            createTeam();
+            createTeam(teamName);
         });
         
     }
@@ -138,7 +141,7 @@ function startApp() {
             idArray.push(answers.engineerID);
 
             // CREATE ADDITIONAL TEAM MEMBER
-            createTeam();
+            createTeam(teamName);
         });
     }
 
@@ -146,11 +149,12 @@ function startApp() {
     function buildTeam() {
        
         console.log(teamMembers, idArray);
+        fs.writeFile(`${teamName}.html`, teamMembers, "utf-8");
 
     }
 
-    createManager();
-    
+    createManager(teamName);
+
 }
 
 startApp();
