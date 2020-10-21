@@ -8,6 +8,12 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
+// PATH 
+const output_dir = path.resolve(__dirname, "output");
+const outputPath = path.join(output_dir, "team.html");
+
+const render = require("./lib/Renderer");
+
 // TEAM BUILDING
 const teamMembers = [];
 const idArray = [];
@@ -149,7 +155,12 @@ function startApp() {
     function buildTeam() {
        
         console.log(teamMembers, idArray);
-        fs.writeFile(`${teamName}.html`, teamMembers, "utf-8");
+        
+        if (!fs.existsSync(output_dir)) {
+            fs.mkdirSync(output_dir);
+        }
+
+        fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
 
     }
 
