@@ -40,12 +40,11 @@ header h1 {
 }
 
 .card {
-    background: #8ba076;
     opacity: 0.9;
     overflow: scroll;
     width: 23rem;
     height: 20rem;
-    border: 0.13rem solid #546147;
+    border: 0.13rem solid;
     align-items: center;
     margin: 1rem;
     padding: 0px
