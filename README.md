@@ -29,16 +29,16 @@ SO THAT I have quick accesss to emails and GitHub profiles
 
 In order to utilize the generator you must install node and it's dependencies.
 
-- clone repo to local directory
-- npm init
-- node install
-- required dependencies: fs, inquirer, path
-- run app.js file using node/nodemon in the command line
+1. `git clone` this repository
+2. `npm init`
+3. `npm i fs`, `npm i inquirer`, `npm i path`, `npm i jest`
+4. `node app`
+5. `npm run test` to pass tests
 
 <a name="usage"></a>
 ### Usage
 
-* Uses [Inquirer npm package](https://github.com/SBoudrias/Inquirer.js/) to prompt  user for their email, id, and specific information based on their role with the company - an intern may provide their school, whereas an engineer may provide their GitHub username.
+* Uses [inquirer npm package](https://github.com/SBoudrias/Inquirer.js/) to prompt  user for their email, id, and specific information based on their role with the company - an intern may provide their school, whereas an engineer may provide their GitHub username.
 
 * App runs as a Node CLI to gather information about each employee.
 
