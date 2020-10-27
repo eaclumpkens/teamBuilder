@@ -30,7 +30,7 @@ header h1 {
 .employee-card img {
     width: 1rem;
     border-radius: 50%;
-    padding: 0px;
+    padding: 0.5rem;
 }
 
 /* EMPLOYEE CARDS */
@@ -56,12 +56,13 @@ header h1 {
     width: 19rem;
     border: none;
     background: transparent;
-    padding: 0.5rem 0rem 0.5rem 0rem;
+    padding: 0.1rem 0rem 0.1rem 0rem;
     margin-bottom: 0.5rem;
 }
 
 .card-title {
     margin: 0.5rem;
+    padding: 0rem;
 }
 
 .card-name {

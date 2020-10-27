@@ -55,13 +55,20 @@ Pass `npm run test` to validate employee information
 <a name="images"></a>
 ### Images
 
+##### Command Line Demo
+![command-line-demo](./output/assets/images/command-line-demo.gif)
 
+##### App Demo
+![app-demo](./output/assets/images/app-demo.gif)
+
+##### Test Demo
+![test-demo](./output/assets/images/test-demo.gif)
 
 ----
 
 <a name="questions"></a>
 ### Questions
-#### Contact Me
+##### Contact Me
 
 Feel free to contact me via GitHub or email with any feedback - thanks for checking out my code!
 
