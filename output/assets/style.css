@@ -91,4 +91,32 @@ header h1 {
     letter-spacing: 0.08rem;
 }
 
+/* MEDIA QUERIES */
 
+
+
+@media screen and (max-width:1599px) {
+
+    /* CONTENT QUERIES */
+
+    p {
+        margin: 0 auto;
+        padding: 1.5% 5% 1.5% 5%;
+    }
+
+    /* CARD QUERIES */
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+    /* CARD DIRECTION */
+
+    .team-area{
+        flex-direction: column !important;
+        margin-top: 2rem;
+        margin-left: -3rem;
+    }
+
+  }
